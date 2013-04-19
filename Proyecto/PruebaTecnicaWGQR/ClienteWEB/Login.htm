@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login</title>
+    <link href="CSS/Sitio.css" type="text/css" rel ="Stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+         
+    <script type="text/javascript">
+        $("#btnIngresar").live("click", function () {
+            //Datos de usuario
+            var vUsuario = $('#Usuario').val();
+            var vContrasenna = $('#Contrasenna').val();
+
+            //Se crea el json
+            var datosUsrPost = { Usuario: vUsuario, Contrasenna: vContrasenna };
+            var jsonPost = JSON.stringify(datosUsrPost);
+            
+            $.ajax({
+                url: 'http://localhost:4083/Service/api/login',
+                type: 'POST',
+                data: jsonPost,
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                success: function (result) {
+                    alert(result)
+                    //Retorna True si la validacion fue correcta
+                    if (result.resultado) {
+                        alert(result.resultado)
+                        alert('usuario valido')
+                        //Se asigna el token a un campo hidden para la utilización en el logout
+                        $('#Token').val(result.token);
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(xhr.responseText);
+                    alert('error')
+
+                }
+
+            });
+        });
+    </script>
+</head>
+<body>
+<form id="LogIn">
+<p><input type ="hidden" id="Token" class="textEntry"/></p> 
+<h2> Ingreso    </h2>
+    <div class="accountInfo">
+                <fieldset class="login">
+                    <legend>Ingresar usuario y contraseña</legend>
+                    <p>
+                    <label id="lblUsuario" >Usuario</label> <br />
+                        <input id="Usuario" type="text" class="textEntry"/>
+                    </p>
+                    <p>
+                    <label id="lblContrasenna">Contraseña</label><br />
+                        <input id="Contrasenna" runat="server" type="password" class="passwordEntry" />
+                        
+                    </p>
+                </fieldset>
+                <p class="submitButton">
+                <input id="btnIngresar" runat="server" type="button"  value="Ingresar" />
+                </p>
+            </div>
+        </form>
+</body>
+</html>

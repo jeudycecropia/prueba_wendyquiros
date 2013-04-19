@@ -1,0 +1,10 @@
+c:\documents and settings\wendy\mis documentos\visual studio 2010\Projects\PruebaTecnicaWGQR\ClienteWEB\bin\ClienteWEB.dll
+c:\documents and settings\wendy\mis documentos\visual studio 2010\Projects\PruebaTecnicaWGQR\ClienteWEB\bin\ClienteWEB.pdb
+c:\documents and settings\wendy\mis documentos\visual studio 2010\Projects\PruebaTecnicaWGQR\ClienteWEB\obj\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\wendy\mis documentos\visual studio 2010\Projects\PruebaTecnicaWGQR\ClienteWEB\obj\Debug\ClienteWEB.dll
+c:\documents and settings\wendy\mis documentos\visual studio 2010\Projects\PruebaTecnicaWGQR\ClienteWEB\obj\Debug\ClienteWEB.pdb
+E:\Documentos Usuarios\quirosrw\Dropbox\Personal\Cecropia\Proyecto\Proyecto\PruebaTecnicaWGQR\ClienteWEB\bin\ClienteWEB.dll
+E:\Documentos Usuarios\quirosrw\Dropbox\Personal\Cecropia\Proyecto\Proyecto\PruebaTecnicaWGQR\ClienteWEB\bin\ClienteWEB.pdb
+E:\Documentos Usuarios\quirosrw\Dropbox\Personal\Cecropia\Proyecto\Proyecto\PruebaTecnicaWGQR\ClienteWEB\obj\Debug\ResolveAssemblyReference.cache
+E:\Documentos Usuarios\quirosrw\Dropbox\Personal\Cecropia\Proyecto\Proyecto\PruebaTecnicaWGQR\ClienteWEB\obj\Debug\ClienteWEB.dll
+E:\Documentos Usuarios\quirosrw\Dropbox\Personal\Cecropia\Proyecto\Proyecto\PruebaTecnicaWGQR\ClienteWEB\obj\Debug\ClienteWEB.pdb

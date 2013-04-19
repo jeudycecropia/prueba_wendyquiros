@@ -1,0 +1,5 @@
+C:\Documents and Settings\alejandro.muñoz\Mis documentos\Visual Studio 2010\Projects\PruebaRest\WcfRestService1\bin\WcfRestService1.dll
+C:\Documents and Settings\alejandro.muñoz\Mis documentos\Visual Studio 2010\Projects\PruebaRest\WcfRestService1\bin\WcfRestService1.pdb
+C:\Documents and Settings\alejandro.muñoz\Mis documentos\Visual Studio 2010\Projects\PruebaRest\WcfRestService1\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\alejandro.muñoz\Mis documentos\Visual Studio 2010\Projects\PruebaRest\WcfRestService1\obj\Debug\WcfRestService1.dll
+C:\Documents and Settings\alejandro.muñoz\Mis documentos\Visual Studio 2010\Projects\PruebaRest\WcfRestService1\obj\Debug\WcfRestService1.pdb
