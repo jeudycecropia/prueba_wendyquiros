@@ -17,7 +17,6 @@ namespace RestService
     {
 
         [System.ServiceModel.Web.WebInvoke(UriTemplate = "api/login", Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-        //[System.ServiceModel.Web.WebGet(UriTemplate = "api/login/{Usuario}/{Contrasenna}", ResponseFormat = System.ServiceModel.Web.WebMessageFormat.Json)]
         public Resultado POST(String Usuario, String Contrasenna)
         {
             DataAccess oDataAccess = new DataAccess();
@@ -32,7 +31,6 @@ namespace RestService
         }
 
         [System.ServiceModel.Web.WebInvoke(UriTemplate = "api/logout", Method = "DELETE", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-        //[System.ServiceModel.Web.WebGet(UriTemplate = "api/logout/{token}", ResponseFormat = System.ServiceModel.Web.WebMessageFormat.Json)]
         public Boolean DELETE(string token)
         {
             DataAccess oDataAccess = new DataAccess();
