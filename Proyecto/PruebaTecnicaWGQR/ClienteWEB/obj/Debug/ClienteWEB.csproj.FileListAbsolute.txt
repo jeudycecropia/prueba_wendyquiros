@@ -8,3 +8,8 @@ E:\Documentos Usuarios\quirosrw\Dropbox\Personal\Cecropia\Proyecto\Proyecto\Prue
 E:\Documentos Usuarios\quirosrw\Dropbox\Personal\Cecropia\Proyecto\Proyecto\PruebaTecnicaWGQR\ClienteWEB\obj\Debug\ResolveAssemblyReference.cache
 E:\Documentos Usuarios\quirosrw\Dropbox\Personal\Cecropia\Proyecto\Proyecto\PruebaTecnicaWGQR\ClienteWEB\obj\Debug\ClienteWEB.dll
 E:\Documentos Usuarios\quirosrw\Dropbox\Personal\Cecropia\Proyecto\Proyecto\PruebaTecnicaWGQR\ClienteWEB\obj\Debug\ClienteWEB.pdb
+E:\Documentos Usuarios\quirosrw\Mis Documentos\GitHub\prueba_wendyquiros\Proyecto\PruebaTecnicaWGQR\ClienteWEB\bin\ClienteWEB.dll
+E:\Documentos Usuarios\quirosrw\Mis Documentos\GitHub\prueba_wendyquiros\Proyecto\PruebaTecnicaWGQR\ClienteWEB\bin\ClienteWEB.pdb
+E:\Documentos Usuarios\quirosrw\Mis Documentos\GitHub\prueba_wendyquiros\Proyecto\PruebaTecnicaWGQR\ClienteWEB\obj\Debug\ResolveAssemblyReference.cache
+E:\Documentos Usuarios\quirosrw\Mis Documentos\GitHub\prueba_wendyquiros\Proyecto\PruebaTecnicaWGQR\ClienteWEB\obj\Debug\ClienteWEB.dll
+E:\Documentos Usuarios\quirosrw\Mis Documentos\GitHub\prueba_wendyquiros\Proyecto\PruebaTecnicaWGQR\ClienteWEB\obj\Debug\ClienteWEB.pdb
