@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PruebaWGQR">
+  <DataContextMoniker Name="/PruebaWGQRDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6b478dd5-942c-452b-869a-0abd34d1a08f" absoluteBounds="2.375, 1, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/PruebaWGQRDataContext/Usuarios" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23d707c6-8b0a-4fd4-9fbf-a3c094a73c64" absoluteBounds="2.39, 1.46, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

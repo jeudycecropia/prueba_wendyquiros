@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login</title>
+    <link href="Styles/Sitio.css" type="text/css" rel ="Stylesheet" />
+    <!--<script src="Scripts/Login.js" type="text/javascript" ></script>-->
+    <!--<script src="Scripts/jquery-1.7.1.js" type="text/javascript"></script>
+    
+    <script src="Scripts/jquery-ui.js"></script>-->
+    <script src="Scripts/json2.js"></script>
+    <script src="Scripts/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.url.js" type="text/javascript"></script>
+
+    <script type="text/javascript" >
+        function loginPost(){ 
+            var vUsuario = document.getElementById('Usuario').value;
+            var vContrasenna = document.getElementById('Contrasenna').value;
+            
+
+            //Se crea el json
+            var datosUsrPost = { Usuario: vUsuario, Contrasenna: vContrasenna };
+            var jsonPost = JSON.stringify(datosUsrPost);
+
+            //Se invoca LoginController
+            $.ajax({
+                url: 'api/login',
+                type: 'POST',
+                data: jsonPost,
+                dataType: "json",
+                processData: false,
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                    if (data.Data.Resultado) {
+                        var token = data.Data.Token;
+                        document.getElementById("Token").value = token;
+
+                        document.getElementById('divLogin').style.display = 'none';
+
+                        $.ajax({
+                            url: 'api/perfil?token=' + token,
+                            type: 'GET',
+                            datatype: "json",
+                            processData: false,
+                            contentType: 'application/json; charset=utf-8',
+                            success: function (jsonPerfil) {
+                                var perfilUsr = jsonPerfil.Data;
+
+                                var tablaPerfil = '<table><thead><th>Nombre</th><th>Apellidos</th><th>Email</th><th>Direccion</th><th>Telefono</th></thead><tbody><tr><td>' + perfilUsr.Nombre + '</td><td>' + perfilUsr.Apellidos + '</td><td>' + perfilUsr.Email + '</td><td>' + perfilUsr.Direccion + '</td><td>' + perfilUsr.Telefono + '</td></tr></tbody></table>';
+                                //document.getElementById('TablePerfil')
+                                var tabla = document.getElementById('TablaPerfil');
+                                tabla.style.display = 'inherit';
+                                tabla.appendChild(tablaPerfil);
+                            },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                alert(xhr.status + ', ' + xhr.thrownError);
+                            }
+                        });
+                    } else {
+                        alert(data.Data.Resultado + ', ' + data.Data.Mensaje);
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status + ', ' + xhr.thrownError);
+                }
+            });
+        };
+
+        function logout() {
+            var token = document.getElementById('Token').value;
+
+            $.ajax({
+                url: "api/logout?token=" + token,
+                type: 'DELETE',
+                dataType: 'json',
+                processData: false,
+                contentType: 'application/json; charset=utf-8',
+                success: function (data) {
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(xhr.responseText);
+                    alert('error');
+                }
+            });
+        }
+                </script>
+</head>
+<body id="body">
+<input type="hidden" id="Token"/>
+<form id="LogIn" onsubmit="javascript:loginPost()">
+            <div class="accountInfo" id="divLogin" style="display:inherit;">
+            <h2> Ingreso </h2>   
+                <fieldset class="login">
+                    <legend>Ingresar usuario y contraseña</legend>
+                    <p>
+                    <label id="lblUsuario" >Usuario</label> <br />
+                        <input id="Usuario" type="text" class="textEntry"/>
+                    </p>
+                    <p>
+                    <label id="lblContrasenna">Contraseña</label><br />
+                        <input id="Contrasenna" runat="server" type="password" class="passwordEntry" />
+                        
+                    </p>
+                </fieldset>
+                <p class="submitButton">
+                <input type="submit" value="Ingresar" />
+                </p>
+            </div>
+        </form>
+
+<form id="Perfil">
+    [ <a href="javascript:logout();">Salir</a> ]
+    <div class="accountInfo" id="TablaPerfil" style="display:none;">
+       
+        <fieldset class="login">
+            <h2>Datos del perfil</h2>
+            
+        </fieldset>
+    </div>
+</form>
+</body>
+</html>

@@ -15,7 +15,7 @@
 
         //Se invoca el metodo de login
         $.ajax({
-            url: 'http://localhost:4083/Service1/api/login',
+            url: 'api/login',
             type: 'POST',
             data: jsonPost,
             datatype: "json",

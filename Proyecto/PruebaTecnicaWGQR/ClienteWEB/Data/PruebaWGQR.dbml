@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="PruebaWGQRDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=EQUIPOVIRTUAL;Initial Catalog=PruebaTecWGQR;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PruebaTecWGQRConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="" Member="Usuarios">
+    <Type Name="Usuarios">
+      <Column Name="Usuario" Type="System.String" CanBeNull="false" />
+      <Column Name="Contrasenna" Type="System.String" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" CanBeNull="false" />
+      <Column Name="Apellidos" Type="System.String" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" CanBeNull="false" />
+      <Column Member="Token" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
